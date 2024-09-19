@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editable Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Editable Resume Builder</h1>
+        </header>
+       
+        <section id="form-section">
+            <h4>Enter Your Details:</h4>
+            <form id="resume-form">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+
+                <label for="contact">Contact:</label>
+                <input type="text" id="contact" name="contact" placeholder="Enter your contact">
+
+                <label for="linkedin">LinkedIn Profile:</label>
+                <input type="url" id="linkedin" placeholder="https://linkedin.com/in/yourprofile">
+            
+
+            </fieldset>
+
+
+            <fieldset>
+                <legend>Education</legend>
+                <label for="education">Education:</label>
+                <textarea id="education" name="education" rows="4" placeholder="Enter your education" required></textarea>
+                <label for="institute">Institute</label>
+                <textarea id="institute" name="institute" placeholder="Enter your Institutes" required></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Skills</legend>
+                <label for="skills">Skills:</label>
+                <textarea id="skills" name="skills" rows="3" placeholder="Enter your skills. e.g:HTML,CSS,JavaScript" required></textarea>
+            </fieldset>
+                 
+            <fieldset>
+                <legend>Work Experience</legend>
+                <div id="experience-container">
+                <div class="experience-entry">
+                <label for="work-experience">Work Experience:</label>
+                <textarea id="experience" name="experience" placeholder="Job-Tile" required></textarea>
+                <textarea id="experience" name="experience" placeholder="Company-Name" required></textarea>
+                <input type="text" id="dates-0" class="dates" placeholder="MM/YYYY - MM/YYYY" required> 
+                </div>
+            </div>
+            
+        </fieldset>
+        
+        <fieldset>
+                <legend>Professional Summary</legend>
+                <textarea id="summary" placeholder="Brief summary of your career and goals" required></textarea>
+            </fieldset>
+
+
+             <button type="submit">Generate Resume</button>
+            </form>
+        </section>
+    </div>
+
+        <!--generated resume will display here-->
+        <section id="resume-section" class="hidden">
+            <h2>Generated Resume</h2>
+            <div id="resume-display" contenteditable="true">
+                
+            </div>
+        </section>
+    
+
+    <script src="app.js"></script>
+</body>
+</html>
